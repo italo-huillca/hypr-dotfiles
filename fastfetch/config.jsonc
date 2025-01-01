@@ -1,0 +1,87 @@
+{
+    "logo": {
+	"source": "~/.config/fastfetch/pngs/chill.png",
+        "height": 18    },
+    "display": {
+        "separator": " : "
+    },
+    "modules": [
+        {
+            "type": "custom",
+            "format": "┌───────────────────────────────────────────────────────────┐"
+        },
+        {
+            "type": "os",
+            "key": "   OS",
+            "keyColor": "red"
+        },
+        {
+            "type": "kernel",
+            "key": "   Kernel",
+            "keyColor": "red"
+        },
+        {
+            "type": "packages",
+            "key": "   Packages",
+            "keyColor": "green"
+        },
+        {
+            "type": "display",
+            "key": "  󰨇 Display",
+            "keyColor": "green"
+        },
+        {
+            "type": "command",
+            "key": "  󱦟 OS Age ",
+            "keyColor": "31",
+            "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); days_with_addition=$((days_difference + 1)); echo $days_with_addition days"
+        },
+        {
+            "type": "wm",
+            "key": "   WM",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "terminal",
+            "key": "   Terminal",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "custom",
+            "format": "└───────────────────────────────────────────────────────────┘"
+        },
+        "break",
+        {
+            "type": "title",
+            "key": "  "
+        },
+        {
+            "type": "custom",
+            "format": "┌───────────────────────────────────────────────────────────┐"
+        },
+        {
+            "type": "cpu",
+            "format": "{1} {4}",
+            "key": "   CPU",
+            "keyColor": "blue"
+        },
+      
+        {
+            "type": "memory",
+            "key": "   Memory",
+            "keyColor": "magenta"
+        },
+
+        {
+            "type": "custom",
+            "format": "└───────────────────────────────────────────────────────────┘"
+        },
+        "break",
+        {
+            "type": "colors",
+            "paddingLeft": 2,
+            "symbol": "circle"
+        },
+        "break"
+    ]
+}

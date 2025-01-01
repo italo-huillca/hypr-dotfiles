@@ -1,0 +1,134 @@
+@import "./colors.rasi"
+
+* {
+  background-color: transparent;
+  text-color: @text;
+  margin: 0;
+  padding: 0;
+}
+
+window {
+  transparency: "real";
+  background-color: @crust;
+  text-color: @text;
+  location: center;
+  anchor: center;
+  fullscreen: false;
+  width: 35%;
+  x-offset: 0;
+  y-offset: 0;
+  enabled: true;
+  border: 3px solid;
+  border-color: @sky;
+  border-radius: 15px;
+  cursor: "default";
+}
+
+prompt {
+  enabled: true;
+  padding: 5px 5px 5px 5px;
+  background-color: @green;
+  text-color: @red;
+}
+
+textbox-prompt-colon {
+  padding: 8px 7px 4px 7px;
+  background-color: @mantle;
+  text-color: @text;
+  expand: false;
+  str: "";
+  font: "fontawesome 15";
+}
+
+entry {
+  background-color: @mantle;
+  text-color: @text;
+  placeholder-color: @subtext1;
+  expand: true;
+  horizontal-align: 0;
+  placeholder: "";
+  padding: 6px;
+  blink: true;
+}
+
+inputbar {
+  enabled: true;
+  background-color: @mantle;
+  text-color: @subtext1;
+  orientation: horizontal;
+  children: [textbox-prompt-colon, entry];
+  border: 1px solid;
+  border-radius: 8px;
+  border-color: @subtext1;
+  margin: 5px;
+  padding: 5px;
+}
+
+listview {
+  enabled: true;
+  background-color: @crust;
+  columns: 1;
+  lines: 10;
+  cycle: true;
+  dynamic: true;
+  layout: vertical;
+  reverse: false;
+  fixed-height: true;
+  fixed-columns: true;
+  padding: 5px;
+  spacing: 6px;
+  margin: 0.5em 0 0.75em;
+  cursor: "default";
+}
+
+mainbox {
+  background-color: @crust;
+  border: 0px;
+  border-radius: 0px;
+  border-color: @teal;
+  children: [inputbar, listview];
+  spacing: 6px;
+  padding: 6px;
+}
+
+element {
+  enabled: true;
+  background-color: @crust;
+  text-color: @subtext1;
+  margin: 0 0.75em;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  orientation: horizontal;
+  border-radius: 0px;
+}
+
+element-icon {
+  background-color: transparent;
+  text-color: inherit;
+  size: 24px;
+  border: 0px;
+}
+
+element normal.normal {
+  background-color: inherit;
+  text-color: inherit;
+}
+
+element selected.normal {
+  border: 2px solid;
+  border-color: @teal;
+  border-radius: 8px;
+  background-color: @teal;
+  text-color: @crust;
+}
+
+element-text {
+  background-color: transparent;
+  text-color: inherit;
+  highlight: bold;
+  cursor: inherit;
+  vertical-align: 0.5;
+  horizontal-align: 0.0;
+  font: "Lexend Medium 16px";
+  margin: 0px 2.5px 0px 2.5px;
+}

@@ -1,0 +1,3 @@
+#!/bin/bash
+# Este script puede actualizar la IP o texto dinámicamente
+echo "$1" > ~/.config/waybar/current_target.txt
