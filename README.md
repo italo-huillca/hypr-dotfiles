@@ -10,7 +10,7 @@ Este repositorio simplemente es para guardar mis configuraciones, aplicaciones q
 **Gestor de archivos:** Thunar  
 **Fonts:** JetBrainsMono Nerd Font  
 **Bloqueo de pantalla:** Hyprlock  
-
+**Terminal:** Kitty
 ## Entorno Pastel
 ![Entorno Pastel](images/pastel.png)
 
@@ -18,6 +18,6 @@ Este repositorio simplemente es para guardar mis configuraciones, aplicaciones q
 ![Entorno Hyppuccin](images/hypuccino.png)
 
 ## TO-DO
-- [ ] Linkear configuraciones al directorio wallpaper.
+- [X] Linkear configuraciones al directorio wallpaper.
 - [ ] Añadir un tercer escritorio (formal).
 - [ ] ...

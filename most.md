@@ -1,0 +1,43 @@
+## Aplicaciones que más uso
+- Telegram
+- BleachBit
+- Visual Studio Code
+- KeePassXC
+- OBS Studio
+- Btop
+- ProtonVPN
+- VirtualBox/VMware
+- Calculadora
+- i3lock
+- OpenVPN
+- Spotify
+- Minecraft
+- Thunar
+- 7zip
+- AppImage
+- Firefox
+- Docker
+- Git
+- Viewnior
+- Streamlink Twitch GUI + Chatterino
+- qBittorrent
+- Calibre
+- Ani-CLI
+- Flatpak/AUR
+- Audacity
+- Discord
+- Administrador de descargas: Motrix
+- LibreOffice
+- Okular
+- VLC
+- MPV
+
+## Extensiones
+- Dark Reader
+- Google Docs Offline
+- ProtonVPN
+- Remove Twitch
+- Toggl
+- Unhook
+- Volume Master
+- DeepL
