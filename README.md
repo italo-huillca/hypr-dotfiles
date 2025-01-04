@@ -17,7 +17,11 @@ Este repositorio simplemente es para guardar mis configuraciones, aplicaciones q
 ## Entorno Hyppuccin
 ![Entorno Hyppuccin](images/hypuccino.png)
 
+## Entorno Red (waybar)
+![Entorno Red](images/red.png)
+
 ## TO-DO
 - [X] Linkear configuraciones al directorio wallpaper.
-- [ ] Añadir un tercer escritorio (formal).
-- [ ] ...
+- [X] Añadir un tercer escritorio (calido).
+- [ ] Añadir configuración kitty.
+- [ ] Estandarizar configuraciones entre temas.

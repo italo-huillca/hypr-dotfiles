@@ -7,7 +7,7 @@ BASE_DIR="$HOME/.config/themes"
 CURRENT_FILE="$BASE_DIR/current_target.txt"
 
 # Lista de temas
-THEMES=("hyppuccin" "pastel") # Agrega más temas aquí según los vayas incluyendo
+THEMES=("hyppuccin" "pastel" "red") # Agrega más temas aquí según los vayas incluyendo
 
 # Leer el tema actual
 CURRENT_THEME=$(cat "$CURRENT_FILE")

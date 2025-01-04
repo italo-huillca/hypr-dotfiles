@@ -124,11 +124,11 @@ window#waybar.empty #window {
 }
 
 #custom-target {
-   color: #8839ef;
+   color: #cba6f7;
 }
 
 #custom-targethtb{
-   color: #07F871;
+   color: #74c7ec;
 }
 
 tooltip {
@@ -137,5 +137,8 @@ tooltip {
 }
 
 #custom-themeswitcher{
-    color: #07F871;
+    color: #a6e3a1;
+}
+#custom-notification{
+    color: #D3DAE3;
 }
