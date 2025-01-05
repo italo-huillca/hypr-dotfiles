@@ -24,4 +24,4 @@ Este repositorio simplemente es para guardar mis configuraciones, aplicaciones q
 - [X] Linkear configuraciones al directorio wallpaper.
 - [X] Añadir un tercer escritorio (calido).
 - [X] Añadir configuración kitty.
-- [ ] Estandarizar configuraciones entre temas.
+- [X] Estandarizar configuraciones entre temas.
