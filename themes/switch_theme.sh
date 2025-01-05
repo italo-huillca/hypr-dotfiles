@@ -27,6 +27,7 @@ echo "$NEXT_THEME" > "$CURRENT_FILE"
 ln -sf "$BASE_DIR/$NEXT_THEME/hypr" "$HOME/.config/"
 ln -sf "$BASE_DIR/$NEXT_THEME/waybar" "$HOME/.config/"
 ln -sf "$BASE_DIR/$NEXT_THEME/rofi" "$HOME/.config/"
+ln -sf "$BASE_DIR/$NEXT_THEME/kitty" "$HOME/.config/"
 
 # Reiniciar Waybar para aplicar cambios
 killall waybar
