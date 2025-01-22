@@ -2,7 +2,7 @@
 - Telegram
 - BleachBit
 - Visual Studio Code
-- KeePassXC
+- KePaXC
 - OBS Studio
 - Btop
 - ProtonVPN
@@ -31,7 +31,13 @@
 - Okular
 - VLC
 - MPV
-
+- Rclone
+- Bat
+- Cava
+- Hyprwall
+- Fastfetch
+- 
+ 
 ## Extensiones
 - Dark Reader
 - Google Docs Offline
