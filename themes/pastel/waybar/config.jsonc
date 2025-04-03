@@ -7,7 +7,7 @@
   "gtk-layer-shell": true,
   "passthrough": false,
   "fixed-center": true,
-  "modules-left": ["hyprland/workspaces","network","custom/target","custom/targethtb","custom/themeswitcher"],
+  "modules-left": ["hyprland/workspaces","network","custom/target","custom/themeswitcher"],
   "modules-center": ["mpris"],
   "modules-right": [
     "battery",
@@ -15,7 +15,6 @@
     "clock",
     "clock#simpleclock",
     "custom/notification",
-    "custom/power",
   ],
   "custom/spotify": {
     "format": "  {}",
