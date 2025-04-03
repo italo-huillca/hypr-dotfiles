@@ -1,26 +1,38 @@
 #!/usr/bin/env bash
 
-# Ruta base donde están los wallpapers
-WALLPAPER_BASE_DIR="$HOME/.config/Wallpapers"
-
-# Leer el tema actual desde current_target.txt
-CURRENT_THEME=$(cat "$HOME/.config/themes/current_target.txt")
-
-# Carpeta de wallpapers según el tema
-WALLPAPER_DIR="$WALLPAPER_BASE_DIR/$CURRENT_THEME"
-
-# Si la carpeta del tema no existe, usar la raíz de Wallpapers
-if [[ ! -d "$WALLPAPER_DIR" ]]; then
-    WALLPAPER_DIR="$WALLPAPER_BASE_DIR"
+# Verificar si hyprpaper está corriendo, si no, iniciarlo
+if ! pgrep -x "hyprpaper" > /dev/null; then
+    hyprpaper &
+    sleep 1  # Esperar para evitar condiciones de carrera
 fi
 
-# Obtener el wallpaper actual
-CURRENT_WALL=$(hyprctl hyprpaper listloaded | awk -F' ' '{print $2}' | head -n 1)
+# Leer el tema actual desde current_target.txt
+THEME_FILE="$HOME/.config/themes/current_target.txt"
+if [[ ! -f "$THEME_FILE" ]]; then
+    echo "Error: No se encontró el archivo $THEME_FILE"
+    exit 1
+fi
 
-# Selecciona un wallpaper aleatorio que no sea el actual
-WALLPAPER=$(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" \) ! -name "$(basename "$CURRENT_WALL")" | shuf -n 1)
+CURRENT_THEME=$(cat "$THEME_FILE")
+WALLPAPER_DIR="$HOME/.config/Wallpapers/$CURRENT_THEME"
 
-# Cargar y aplicar el nuevo wallpaper
+# Verificar si el directorio del tema existe
+if [[ ! -d "$WALLPAPER_DIR" ]]; then
+    echo "Error: No se encontró el directorio del tema $WALLPAPER_DIR"
+    exit 1
+fi
+
+# Obtener un wallpaper aleatorio del tema actual
+WALLPAPER=$(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.jpeg" \) | shuf -n 1)
+
+# Verificar si se encontró un wallpaper
+if [[ -z "$WALLPAPER" ]]; then
+    echo "Error: No se encontraron wallpapers en $WALLPAPER_DIR"
+    exit 1
+fi
+
+# Cargar el wallpaper en hyprpaper
+hyprctl hyprpaper unload all
 hyprctl hyprpaper preload "$WALLPAPER"
-hyprctl hyprpaper wallpaper "eDP-1,$WALLPAPER" # Cambia "eDP-1" por tu pantalla
+hyprctl hyprpaper wallpaper "eDP-1,$WALLPAPER"
 hyprctl hyprpaper reload
