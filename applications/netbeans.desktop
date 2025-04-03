@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=netbeans 21
+Exec=/opt/netbeans21/netbeans/bin/netbeans
+Icon=/opt/netbeans21/netbeans/nb/netbeans.png
+Type=Application
+Categories=Development;IDE;

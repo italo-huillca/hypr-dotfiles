@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=IntelliJ IDEA Ultimate
+Exec=/opt/ideaIU/bin/idea
+Icon=/opt/ideaIU/bin/idea.png
+Type=Application
+Categories=Development;IDE;

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Android Studio
+Comment=Inicia Android Studio
+Icon=/home/italo/repos/android-studio/bin/studio.png
+Exec=/home/italo/repos/android-studio/bin/studio
+Terminal=false
+Categories=Development;IDE;
