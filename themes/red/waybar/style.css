@@ -29,7 +29,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-  background-color: #E8582B;
+  background-color: #ffb85c;
   color: @text;
   border: none;
 }
@@ -63,11 +63,11 @@ window#waybar {
 }
 
 #mpris.playing {
-  color: #CB5925;
+  color: #f48c06;
 }
 
 #mpris.paused {
-  color: #9399b2;
+  color: #E8582B;
 }
 
 #custom-sep {
@@ -104,7 +104,7 @@ window#waybar.empty #window {
 }
 
 #pulseaudio.muted {
-  background-color: #a6adc8;
+  background-color: #E8582B;
 }
 
 #custom-logo {
