@@ -7,14 +7,11 @@
   "gtk-layer-shell": true,
   "passthrough": false,
   "fixed-center": true,
-  "modules-left": ["hyprland/workspaces","network","custom/target","custom/themeswitcher"],
+  "modules-left": ["hyprland/workspaces","custom/target","custom/themeswitcher"],
   "modules-center": ["mpris"],
   "modules-right": [
     "battery",
     "pulseaudio",
-    "clock",
-    "clock#simpleclock",
-    "custom/notification",
   ],
   "custom/spotify": {
     "format": "  {}",
@@ -50,26 +47,10 @@
     "show-passive-items": true,
     "spacing": 10,
   },
-  "clock#simpleclock": {
-    "tooltip": false,
-    "format": " {:%H:%M}",
-  },
-  "clock": {
-    "format": " {:L%a %d %b}",
-    "calendar": {
-      "format": {
-        "days": "<span weight='normal'>{}</span>",
-        "months": "<span color='#cdd6f4'><b>{}</b></span>",
-        "today": "<span color='#f38ba8' weight='700'><u>{}</u></span>",
-        "weekdays": "<span color='#f9e2af'><b>{}</b></span>",
-        "weeks": "<span color='#a6e3a1'><b>W{}</b></span>",
-      },
-      "mode": "month",
-      "mode-mon-col": 1,
-      "on-scroll": 1,
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
     },
-    "tooltip-format": "<span color='#cdd6f4' font='Lexend 16'><tt><small>{calendar}</small></tt></span>",
-  },
   "cpu": {
     "format": " {usage}%",
     "tooltip": true,

@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
 Name=󰭽  Rclone Sync from Drive
-Exec=rclone sync drive:/Sync /home/xdork/Sync --progress --transfers=2 --checkers=8 --fast-list --delete-before
+Exec=rclone sync drive:/Sync /home/xdork/Sync --progress --transfers=2 --checkers=8 --fast-list --delete-before --create-empty-src-dirs
 Icon=
 Terminal=true

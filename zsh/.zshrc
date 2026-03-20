@@ -1,3 +1,4 @@
+zmodload zsh/zprof
 # Fix the Java Problem
 export _JAVA_AWT_WM_NONREPARENTING=1
 
@@ -5,6 +6,8 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
+export PATH="$PATH:$HOME/fvm/default/bin"
 
 # Set up the prompt
 
@@ -24,7 +27,7 @@ HISTFILE=~/.zsh_history
 
 # Use modern completion system
 autoload -Uz compinit
-compinit
+compinit -C
 
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
@@ -126,8 +129,71 @@ function rmk(){
 
 # Finalize Powerlevel10k instant prompt. Should stay at the bottom of ~/.zshrc.
 (( ! ${+functions[p10k-instant-prompt-finalize]} )) || p10k-instant-prompt-finalize
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+source ~/.powerlevel10k/powerlevel10k.zsh-theme
 bindkey "^[[3~" delete-char
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 export PATH="$HOME/.local/bin:$PATH"
+
+export GTK_THEME=Arc-Dark
+
+export NVM_DIR="$HOME/.nvm"
+
+nvm() {
+  unset -f nvm node npm npx
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  nvm "$@"
+}
+
+node() {
+  nvm use default >/dev/null 2>&1
+  node "$@"
+}
+
+npm() {
+  nvm use default >/dev/null 2>&1
+  npm "$@"
+}
+
+npx() {
+  nvm use default >/dev/null 2>&1
+  npx "$@"
+}
+
+
+export XDG_SCREENSHOTS_DIR=/home/xdork/Imágenes/cap
+
+export ANKI_WAYLAND=1
+
+export PATH=$PATH:/opt/netbeans21/bin
+export PATH=$PATH:/opt/netbeans21/netbeans/bin
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/emulator
+export JAVA_HOME=/usr/lib/jvm/default
+export PATH=$PATH:$JAVA_HOME/bin
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/cmdline-tools/bin
+export CHROME_EXECUTABLE=/usr/bin/chromium
+
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+  eval "$(ssh-agent -s)" >/dev/null
+  ssh-add ~/.ssh/id_ed25519 >/dev/null 2>&1
+fi
+
+alias postman='postman --disable-gpu --ozone-platform=x11'
+export PATH="$PATH:$HOME/.pub-cache/bin"
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/xdork/.dart-cli-completion/zsh-config.zsh ]] && . /home/xdork/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+
+export PATH="$HOME/fvm/default/bin:$PATH"
+
+conda() {
+  unset -f conda
+  source ~/miniconda3/etc/profile.d/conda.sh
+  conda "$@"
+}
+
+
